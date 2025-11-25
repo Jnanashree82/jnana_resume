@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume</title>
+<style>
+body {
+font-family: Arial,sans-serif; 
+padding: 40px;
+background: #f2f2f2;
+}
+.resume { 
+width: 75%; 
+margin: auto;
+background: white; 
+padding: 40px;
+border: 1px solid #ccc;
+}
+h1 {
+text-align: center; 
+font-size: 28px; 
+margin-bottom: 5px;
+}
+.contact {
+text-align: center; 
+font-size: 14px; 
+margin-bottom: 20px;
+}
+.section-title {
+font-weight: bold; 
+background: #f0f0f0; 
+padding: 8px;
+border-left: 4px solid black; 
+margin-top: 25px;
+margin-bottom: 10px; 
+cursor: pointer;
+}
+.hide {
+display: none;
+}
+.edu-table, .cert-table { 
+width: 100%;
+border-collapse: collapse;
+}
+.edu-table td, .cert-table td { 
+padding: 4px 0;
+}
+ul {
+margin-top: 5px;
+}
+.project-title {
+font-weight: bold;
+}
+.download-btn { 
+display: block; 
+margin: 20px auto; 
+padding: 10px 18px; 
+background: black; 
+color: white;
+border: none; 
+cursor: pointer; 
+font-size: 14px;
+}
+</style>
+</head>
+<body>
+<div class="resume" id="resumeContent">
+<h1>Jnanashree T</h1>
+<div class="contact">
+Email: jnanashreet329@gmail.com | Mobile: 8904851986 | 
+LINKEDIN.COM/IN/Jnanashree-T
+| Address: channagiri Davanagere(Dis)
+</div>
+<button class="download-btn" onclick="downloadResume()">Download 
+Resume</button>
+<!-- SUMMARY -->
+<div class="section-title" onclick="toggleSection('summary')">SUMMARY 𝗍</div>
+<div id="summary">
+<p>
+Motivated and ambitious Computer Science Engineering student with a strong interest in technology.
+Skilled in time management, communication, and teamwork.
+Possesses a strong work ethic and eagerness to learn new concepts.
+Looking to apply technical and interpersonal skills in real-world projects.
+Seeking opportunities to gain experience and contribute to an organization’s growth.
+</p>
+</div>
+<!-- EDUCATION -->
+<div class="section-title" onclick="toggleSection('education')">EDUCATION 𝗍</div>
+<div id="education">
+<table class="edu-table">
+<tr>
+<td><b>Bachelor of Engineering – CSE</b> | JNN College Engineering </td>
+<td align="right">CGPA-8.50 | 2023–2027</td>
+</tr>
+<tr>
+<td><b>Pre – University Course – Science</b> | Global PU College</td>
+<td align="right">Percentage-84.0% | 2020–2022</td>
+</tr>
+<tr>
+<td><b>SSLC</b> | Pragathi vidya nikethana Horahalli</td>
+<td align="right">Percentage-91.52% | 2019–2020</td>
+</tr>
+</table>
+</div>
+<!-- CORE COMPETENCIES -->
+<div class="section-title" onclick="toggleSection('skills')">CORE COMPETENCIES
+𝗍</div>
+<div id="skills">
+<ul>
+<li><b>Programming Language:</b> Data Structure,JAVA,HTML,JavaScript</li>
+<li><b>Computer Fundamentals:</b> DBMS, Micro-Controller</li>
+<li><b>Database:</b> SQL</li>
+<li><b>Frameworks & Tools:</b> Github,git,latex</li>
+</ul>
+</div>
+<!-- PROJECTS -->
+<div class="section-title" onclick="toggleSection('projects')">PROJECTS 𝗍</div>
+<div id="projects">
+<p class="project-title">Mini coding Project - Encoding and Decoding the Images | Web 
+Development</p>
+<ul>
+<li>Developed an Image Encoding and Decoding System that allows users to securely hide and retrieve information within images.</li>
+ <li>Designed a user-friendly interface using HTML, CSS, and JavaScript to upload images, encode messages, and decode hidden content.</li> 
+ <li>Implemented backend logic using PHP for processing image data, applying encoding algorithms, and managing secure retrieval of embedded messages.</li>
+  <li>Integrated input validation and optimized data handling to ensure accuracy, privacy, and smooth user experience.</li> 
+<li>Enhanced system reliability by testing various image formats and ensuring efficient message embedding without affecting image quality.</li>
+</ul>
+JS</p>
+<p class="project-title">Web Design Project - Blood Donor and Registration Portal | HTML, CSS,javascript,PHP
+<ul>
+<li>Designed and developed a user-friendly Blood Donor & Registration Portal to connect blood donors with individuals in need.</li> 
+<li>Implemented features such as donor registration, login authentication, and blood group–based search functionality.</li>
+ <li>Created interactive forms with validation to ensure accurate donor information and smooth user experience.</li>
+ <li>Integrated a backend database to store donor details securely and manage user requests efficiently.</li>
+</ul>
+<p class="project-title">AI Tools Exploration – Gamma.ai</p>
+<ul>
+<li>Explored Gamma.ai to generate AI-based presentations from text input efficiently.</li>
+ <li>Utilized automated design and layout features to enhance content quality and reduce presentation creation time.</li>
+</ul>
+</div>
+<!-- CERTIFICATIONS -->
+<div class="section-title" onclick="toggleSection('certifications')">CERTIFICATIONS
+𝗍</div>
+<div id="certifications">
+<table class="cert-table">
+<tr>
+<td>Math Olympiad</td>
+<td align="right">22nd April 2023</td>
+</tr>
+<tr>
+<td>NPTEL</td>
+<td align="right">1st November 2025</td>
+</tr>
+</table>
+</div>
+<!-- STRENGTHS -->
+<div class="section-title" onclick="toggleSection('strengths')">STRENGTHS 𝗍</div>
+<div id="strengths">
+<ul>
+<li>Problem Solving</li>
+<li>Web Development</li>
+<li>Quick Learner</li>
+</ul>
+</div>
+</div>
+<!-- ========= JAVASCRIPT ========= -->
+<script>
+// Show/Hide sections 
+function toggleSection(id) {
+const section = document.getElementById(id); 
+section.classList.toggle("hide");
+}
+// Download resume as PDF (browser print) 
+function downloadResume() {
+window.print();
+}
+</script>
+</body>
+</html>
